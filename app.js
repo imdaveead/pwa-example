@@ -29,7 +29,7 @@ if('serviceWorker' in navigator) {
 //  1. Use HTTPS
 //  2. Register a service worker
 //  3. Have a valid app manifest
-window.addEventListener('beforeinstallprompt', (event) => {
+window.addEventListener('beforeinstallprompt', function beforeInstallPrompt(event) {
     // Prevent Chrome 67 and earlier from automatically
     // showing the prompt.
     event.preventDefault();
@@ -46,10 +46,9 @@ window.addEventListener('beforeinstallprompt', (event) => {
         // Show the install prompt
         banner.style.bottom = "-50px";
         event.prompt();
-        
     });
 
     // Remove the install prompt listener, ive seen it
     // get actived multiple times if you cancel the prompt.
-    window.removeEventListener("beforeinstallprompt");
+    window.removeEventListener("beforeinstallprompt", beforeInstallPrompt);
 });
