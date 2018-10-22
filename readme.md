@@ -4,9 +4,6 @@ Live at [davecode.me/pwa](https://davecode.me/pwa)
 This is a example progressive web app, you can use it to test if your device supports the
 add to home screen popup and [service workers][1], or use it as a starting point for your application.
 
-What's different about this is (I couldn't find this anywhere else) that it also works on the
-older iOS add to home screen, with the app icons.
-
 ## Features
 - Works offline
 - Cache updates new resources automatically (needs extra reload to show changes)
